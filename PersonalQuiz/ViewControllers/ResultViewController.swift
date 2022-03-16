@@ -23,9 +23,7 @@ class ResultViewController: UIViewController {
     
     private func updateResult() {
         var repeatabilityOfAnimals: [Animal: Int] = [:]
-        
         let animals = response.map { $0.animal }
-        
         for animal in animals {
             repeatabilityOfAnimals[animal] = (repeatabilityOfAnimals[animal] ?? 0 ) + 1
         }
